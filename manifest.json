@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "Reading Ruler",
+  "version": "1.8",
+  "description": "Reading Ruler is a browser add-on that highlights the row of text under the mouse cursor.",
+  "author": "Oren Trutner",
+  "homepage_url": "https://github.com/orentrutner/reading-ruler",
+  "default_locale": "en",
+
+  "permissions": [ "storage", "tabs" ],
+
+  "icons": {
+    "48": "icons/ruler-48.png",
+    "96": "icons/ruler-96.png",
+    "128": "icons/ruler-128.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "48": "icons/ruler-48.png",
+      "96": "icons/ruler-96.png",
+      "128": "icons/ruler-128.png"
+    },
+    "default_popup": "popup/popup.html"
+  },
+
+  "commands": {
+    "toggle-addon": {
+      "suggested_key": {
+        "default": "Alt+R"
+      },
+      "description": "Toggle Reading Ruler on or off"
+    }
+  },
+
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "css": ["css/main.css"],
+    "js": [
+      "src/polyfills/browser-polyfill.min.js",
+      "src/common/colors.js",
+      "src/common/commands.js",
+      "src/common/extension.js",
+      "src/common/options.js",
+      "src/content/range.js",
+      "src/content/rect.js",
+      "src/content/polyfills.js",
+      "src/content/dom.js",
+      "src/content/caret.js",
+      "src/content/highlight-visualizer.js",
+      "src/content/iframe-visualizer.js",
+      "src/content/negative-visualizer.js",
+      "src/content/ruler.js",
+      "src/content/main.js"
+    ],
+    "all_frames": true
+  }]
+}

@@ -1,0 +1,34 @@
+{
+    "extensionName": {
+        "message": "Reading Ruler",
+        "description": "Name of the extension"
+    },
+    "extensionDescription": {
+        "message": "Highlights the row of text you are reading.",
+        "description": "Description of the extension"
+    },
+    "addonEnabledText": {
+        "message": "Enable Reading Ruler",
+        "description": "Enable Reading Ruler checkbox"
+    },
+    "hotkeyInfo": {
+        "message": "You can also use the Alt+R hotkey to enable and disable Reading Ruler.",
+        "description": "A message telling the user about the hotkey for the add-on."
+    },
+    "colorHeading": {
+        "message": "Color",
+        "description": "Heading of the popup's color section"
+    },
+    "opacityHeading": {
+        "message": "Opacity",
+        "description": "Heading of the popup's opacity section"
+    },
+    "showOnThisPage": {
+        "message": "Show on this page",
+        "description": "Show on this page checkbox"
+    },
+    "showOnAllPagesOf": {
+        "message": "Show on all pages of $1",
+        "description": "Show on all pages checkbox"
+    }
+}
